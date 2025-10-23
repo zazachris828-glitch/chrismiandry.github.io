@@ -29,10 +29,14 @@ header h1 {
   color: #ffd700;
   margin: 20px 0 10px;
 }
-header h2 {
+header h2.subtitle {
   color: #00d4ff;
   font-weight: 500;
   margin-bottom: 25px;
+}
+header p.skills-summary {
+    color: #e0e0e0;
+    font-size: 1.1em;
 }
 section {
   max-width: 1000px;
@@ -42,21 +46,24 @@ section {
   border-radius: 15px;
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
 }
-h2 {
+h2.section-title {
   text-align: center;
   color: #ffd700;
-  margin-bottom: 30px;
-  font-size: 2em;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  font-family: 'Orbitron', sans-serif;
 }
 .about p {
   text-align: center;
   line-height: 1.8;
   font-size: 1.1em;
   color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
 }
 .service {
@@ -72,12 +79,14 @@ h2 {
   box-shadow: 0 10px 30px rgba(255,215,0,0.4);
 }
 .service h3 {
-  color: #ffd700;
-  margin-bottom: 10px;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  font-size: 1.3em;
 }
 .service p {
   color: #dcdcdc;
   font-size: 0.95em;
+  line-height: 1.6;
 }
 .projects {
   display: grid;
@@ -90,100 +99,125 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 .project:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 40px rgba(0,212,255,0.3);
 }
+.project-content {
+    padding: 20px;
+}
 .project h4 {
   color: #00d4ff;
-  margin: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
 .project p {
   color: #ddd;
-  margin: 0 15px 15px;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 .cta {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .cta a {
-  background: linear-gradient(135deg, #ff8c00, #ff6b00);
-  color: #fff;
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  color: #0a0f24;
   padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
 }
 .cta a:hover {
-  background: linear-gradient(135deg, #ffaa00, #ff8c00);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255,215,0,0.3);
 }
 footer {
   text-align: center;
   padding: 30px;
   background: rgba(0,0,0,0.4);
   color: #aaa;
+  margin-top: 60px;
 }
 </style>
 </head>
 <body>
 <header>
-  <img src="https://i.ibb.co/39yJHg3w/Gemini-Generated-Image-l1m1mul1m1mul1m1.png" alt="Logo Miandry Christien">
+  <img src="https://i.ibb.co/39yJHg3w/Gemini-Generated-Image-l1m1mul1m1mul1m1.png" alt="Mascotte Fourmi de The Media Fixer">
   <h1>THE MEDIA FIXER</h1>
-  <h2>Miandry Christien — Data & Automation Expert</h2>
-  <p>Traduction | Gestion de Données | Automatisation n8n</p>
+  <h2 class="subtitle">Miandry Christien — Freelance Tech & Créatif</h2>
+  <p class="skills-summary">Automatisation n8n | Gestion de Données | Traduction Pro | Contenu Visuel</p>
 </header>
 
 <section class="about">
-  <h2>À Propos</h2>
-  <p>Je suis <strong>Miandry Christien</strong>, freelance passionné par la donnée et l’automatisation. À travers <strong>The Media Fixer</strong>, j’aide les entreprises, startups et indépendants à gagner du temps grâce à des solutions numériques personnalisées : automatisation des tâches, traduction multilingue de qualité et gestion efficace des bases de données. Mon objectif est simple : transformer vos données en résultats concrets.</p>
+  <h2 class="section-title">À Propos</h2>
+  <p>Je suis <strong>Miandry Christien</strong>, le fondateur de <strong>The Media Fixer</strong>. J'aide les entreprises et les entrepreneurs à transformer leurs défis numériques en opportunités. Ma double expertise unique en logique des données et en créativité visuelle me permet de proposer des solutions complètes : j'optimise vos processus avec des automatisations intelligentes (n8n), je structure vos bases de données pour les rendre exploitables, j'adapte vos messages pour le marché international, et je crée des visuels percutants qui captent l'attention.</p>
 </section>
 
 <section>
-  <h2>Services</h2>
+  <h2 class="section-title">Services</h2>
   <div class="services">
     <div class="service">
-      <h3>Traduction Professionnelle</h3>
-      <p>Traduction multilingue précise et adaptée au ton de votre marque. Optimisation SEO et cohérence terminologique pour vos contenus techniques et marketing.</p>
+      <h3>Automatisation n8n</h3>
+      <p>Création de workflows intelligents pour connecter vos applications, automatiser vos tâches répétitives et vous faire gagner un temps précieux (jusqu'à 15h/semaine).</p>
     </div>
     <div class="service">
       <h3>Gestion de Données</h3>
-      <p>Nettoyage, structuration et visualisation de vos données. Migration de bases, automatisation de rapports et optimisation de flux d’informations.</p>
+      <p>Nettoyage, structuration, et migration sécurisée de vos bases de données. Je transforme votre chaos informationnel en données fiables et prêtes pour l'analyse.</p>
     </div>
     <div class="service">
-      <h3>Automatisation n8n</h3>
-      <p>Création de workflows intelligents avec n8n : intégrations API, synchronisation multi-apps et automatisation de vos processus métiers pour un gain de productivité mesurable.</p>
+      <h3>Traduction Pro FR ↔ EN</h3>
+      <p>Traduction 100% humaine, adaptée au contexte culturel et optimisée pour le SEO, idéale pour l'e-commerce, le marketing et les contenus techniques.</p>
     </div>
-  </div>
-  <div class="cta">
-    <a href="#contact">Demander un audit gratuit</a>
+    <div class="service">
+      <h3>Contenu Visuel & Média</h3>
+      <p>Retouche photo professionnelle et montage vidéo court et dynamique (Reels, TikToks) pour des réseaux sociaux percutants et une image de marque soignée.</p>
+    </div>
   </div>
 </section>
 
 <section>
-  <h2>Projets Réalisés</h2>
+  <h2 class="section-title">Projets & Résultats</h2>
   <div class="projects">
     <div class="project">
-      <h4>Traduction Multilingue E-commerce</h4>
-      <p>Traduction complète d’une boutique (5000+ produits) vers 3 langues, avec adaptation culturelle et SEO international.</p>
+      <div class="project-content">
+          <h4>Automatisation CRM avec n8n</h4>
+          <p><strong>Résultat : 15h/semaine économisées.</strong> Conception d'un workflow synchronisant CRM, facturation et marketing pour éliminer les tâches manuelles.</p>
+      </div>
     </div>
     <div class="project">
-      <h4>Automatisation CRM avec n8n</h4>
-      <p>Workflow de synchronisation clients, marketing et facturation — 15h/semaine économisées pour le client.</p>
+      <div class="project-content">
+          <h4>Migration de Base de Données</h4>
+          <p><strong>Résultat : Transfert sécurisé de 50 000 enregistrements.</strong> Audit, nettoyage, restructuration et migration sans perte vers une nouvelle base de données.</p>
+      </div>
     </div>
     <div class="project">
-      <h4>Migration Base de Données</h4>
-      <p>Transfert sécurisé de 50 000 enregistrements, nettoyage et restructuration complète des données clients.</p>
+        <div class="project-content">
+          <h4>Traduction E-commerce</h4>
+          <p><strong>Résultat : +5000 fiches produits traduites.</strong> Traduction et adaptation SEO (FR ↔ EN) pour un site e-commerce visant le marché international.</p>
+        </div>
+    </div>
+    <div class="project">
+      <div class="project-content">
+          <h4>Design d'Identités Visuelles</h4>
+          <p><strong>Résultat : Des marques prêtes à convaincre.</strong> Conception de multiples logos et identités visuelles pour des startups et des boutiques en ligne, en alignant le design avec leurs objectifs marketing et leur audience cible.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p style="text-align:center;color:#ccc;max-width:700px;margin:0 auto 30px;">Discutons de votre projet ! Cliquez ci-dessous pour m’écrire directement un message via votre messagerie.</p>
+  <h2 class="section-title">Contactez-Moi</h2>
+  <p style="text-align:center;color:#ccc;max-width:700px;margin:0 auto 30px;">Prêt à optimiser vos processus ou à améliorer votre image de marque ? Discutons de votre projet !</p>
   <div class="cta">
-    <a href="mailto:zazachris828@gmail.com?subject=Demande%20de%20collaboration&body=Bonjour%20Miandry%20Christien,%20je%20souhaite%20parler%20de%20mon%20projet...">📧 Envoyer un message</a>
+    <a href="mailto:zazachris828@gmail.com?subject=Demande%20de%20collaboration%20-%20The%20Media%20Fixer">📧 Lancer la discussion</a>
   </div>
 </section>
 
